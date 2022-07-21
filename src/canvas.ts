@@ -15,4 +15,18 @@ export default class Canvas {
   drawPixel(x: number, y: number) {
     this.ctx.fillRect(x, y, 4, 4);
   }
+
+  clear() {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+  }
+
+  render(callback: Function) {
+    this.clear();
+    callback();
+  }
+
+  animate(callback: Function) {
+    this.render(callback);
+    requestAnimationFrame(() => this.animate(callback));
+  }
 }

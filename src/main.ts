@@ -9,4 +9,6 @@ app.innerHTML = `
 
 const canvas = new Canvas(app);
 
-canvas.drawPixel(10, 10);
+canvas.animate(() => {
+  canvas.drawPixel(Math.random() * canvas.width, Math.random() * canvas.height);
+});
