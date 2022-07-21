@@ -12,8 +12,8 @@ export default class Canvas {
     div.appendChild(this.canvas);
   }
 
-  drawPixel(x: number, y: number) {
-    this.ctx.fillRect(x, y, 4, 4);
+  drawPixel(x: number, y: number, size = 1) {
+    this.ctx.fillRect(x, y, size, size);
   }
 
   clear() {
