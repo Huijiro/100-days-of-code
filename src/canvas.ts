@@ -1,14 +1,18 @@
 export default class Canvas {
-  canvas: any;
-  ctx: any;
-  width: any;
-  height: any;
+  canvas: HTMLCanvasElement;
+  ctx: CanvasRenderingContext2D;
+  width: number;
+  height: number;
   constructor(div: HTMLDivElement) {
     this.canvas = document.createElement('canvas');
-    this.ctx = this.canvas.getContext('2d');
+    this.ctx = this.canvas.getContext('2d') as CanvasRenderingContext2D;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
 
     div.appendChild(this.canvas);
+  }
+
+  drawPixel(x: number, y: number) {
+    this.ctx.fillRect(x, y, 4, 4);
   }
 }
