@@ -9,4 +9,9 @@ export default class Vector2D {
     this.x += vector.x;
     this.y += vector.y;
   }
+
+  reset() {
+    this.x = 0;
+    this.y = 0;
+  }
 }
