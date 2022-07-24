@@ -112,7 +112,7 @@ export default class Pong extends Scene {
       this,
     );
 
-    this.ballPhysics.body.setVelocity(Phaser.Math.Between(-200, 200), 200);
+    this.ballPhysics.body.setVelocity(Phaser.Math.Between(-400, 400), 200);
 
     this.paddle1Physics.body.setCollideWorldBounds(true);
     this.paddle2Physics.body.setCollideWorldBounds(true);
