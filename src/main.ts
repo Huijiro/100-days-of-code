@@ -1,7 +1,7 @@
-import Pong from './pong';
+import Pong from './Pong';
 
-const game = new Phaser.Game({
-  type: Phaser.AUTO,
+new Phaser.Game({
+  type: Phaser.WEBGL,
   width: 800,
   height: 600,
   scene: [Pong],
